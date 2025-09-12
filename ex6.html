@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <body>
@@ -17,13 +19,16 @@
     <ul id="shopList"></ul>
 
     <script>
-        
-        // add code here
-        
-        
+    const selectItem = document.getElementById("select_item");
+    const shopList = document.getElementById("shopList");
+
+    selectItem.addEventListener("change", function() {
+    const selectedValue = selectItem.options[selectItem.selectedIndex].text;
+    const listItem = document.createElement("li");
+    listItem.textContent = selectedValue;
+    shopList.appendChild(listItem);
+    });
     </script>
 
-    
-
-    </body>
+</body>
 </html>
